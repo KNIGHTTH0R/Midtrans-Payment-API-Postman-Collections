@@ -55,7 +55,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"transaction_details\": {\n    \"order_id\": \"ORDER-102\",\n    \"gross_amount\": 10000\n  },\n  \"credit_card\": {\n    \"secure\": true\n  },\n  \"item_details\": [{\n    \"id\": \"ITEM1\",\n    \"price\": 10000,\n    \"quantity\": 1,\n    \"name\": \"Midtrans Bear\"\n  }],\n  \"customer_details\": {\n    \"first_name\": \"TEST\",\n    \"last_name\": \"MIDTRANSER\",\n    \"email\": \"test@midtrans.com\",\n    \"phone\": \"+628123456\",\n    \"billing_address\": {\n      \"first_name\": \"TEST\",\n      \"last_name\": \"MIDTRANSER\",\n      \"email\": \"test@midtrans.com\",\n      \"phone\": \"081 2233 44-55\",\n      \"address\": \"Sudirman\",\n      \"city\": \"Jakarta\",\n      \"postal_code\": \"12190\",\n      \"country_code\": \"IDN\"\n    },\n    \"shipping_address\": {\n      \"first_name\": \"TEST\",\n      \"last_name\": \"MIDTRANSER\",\n      \"email\": \"noreply@midtrans.com\",\n      \"phone\": \"0812345678910\",\n      \"address\": \"Sudirman\",\n      \"city\": \"Jakarta\",\n      \"postal_code\": \"12190\",\n      \"country_code\": \"IDN\"\n    }\n  }\n}"
+							"raw": "{\n  \"transaction_details\": {\n    \"order_id\": \"ORDER-102\",\n    \"gross_amount\": 10000\n  },\n  \"credit_card\": {\n    \"secure\": true\n  },\n  \"item_details\": [{\n    \"id\": \"ITEM1\",\n    \"price\": 10000,\n    \"quantity\": 1,\n    \"name\": \"Midtrans Bear\"\n  }],\n  \"customer_details\": {\n    \"first_name\": \"TEST\",\n    \"last_name\": \"MIDTRANSER\",\n    \"email\": \"noreply@example.com\",\n    \"phone\": \"+628123456\",\n    \"billing_address\": {\n      \"first_name\": \"TEST\",\n      \"last_name\": \"MIDTRANSER\",\n      \"email\": \"noreply@example.com\",\n      \"phone\": \"081 2233 44-55\",\n      \"address\": \"Sudirman\",\n      \"city\": \"Jakarta\",\n      \"postal_code\": \"12190\",\n      \"country_code\": \"IDN\"\n    },\n    \"shipping_address\": {\n      \"first_name\": \"TEST\",\n      \"last_name\": \"MIDTRANSER\",\n      \"email\": \"noreply@example.com\",\n      \"phone\": \"0812345678910\",\n      \"address\": \"Sudirman\",\n      \"city\": \"Jakarta\",\n      \"postal_code\": \"12190\",\n      \"country_code\": \"IDN\"\n    }\n  }\n}"
 						},
 						"description": "SNAP transaction token request with recommended parameter.\nLearn more about the parameters here:\nhttps://snap-docs.midtrans.com/#json-parameter-request-body"
 					},
@@ -211,7 +211,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"transaction_details\": {\n    \"order_id\": \"ORDER-101-b\",\n    \"gross_amount\": 10000\n  },\n  \"enabled_payments \": [\n  \t\"credit_card\", \n  \t\"permata_va\", \n  \t\"bca_va\", \n  \t\"echannel\", \n  \t\"echannel\", \n  \t\"other_va\", \n  \t\"mandiri_clickpay\", \n  \t\"cimb_clicks\", \n  \t\"bca_klikbca\", \n  \t\"bca_klikpay\", \n  \t\"bri_epay\", \n  \t\"telkomsel_cash\", \n  \t\"bbm_money\", \n  \t\"xl_tunai\", \n  \t\"indosat_dompetku\", \n  \t\"mandiri_ecash\", \n  \t\"kioson\", \n  \t\"indomaret\"\n  \t]\n}"
+							"raw": "{\n  \"transaction_details\": {\n    \"order_id\": \"ORDER-101-b\",\n    \"gross_amount\": 10000\n  },\n  \"enabled_payments \": [\n    \"credit_card\", \n    \"permata_va\", \n    \"bca_va\", \n    \"echannel\", \n    \"echannel\", \n    \"other_va\", \n    \"mandiri_clickpay\", \n    \"cimb_clicks\", \n    \"bca_klikbca\", \n    \"bca_klikpay\", \n    \"bri_epay\", \n    \"telkomsel_cash\", \n    \"bbm_money\", \n    \"xl_tunai\", \n    \"indosat_dompetku\", \n    \"mandiri_ecash\", \n    \"kioson\", \n    \"indomaret\"\n    ]\n}"
 						},
 						"description": "SNAP transaction token request with additional parameter to specify which payment method to display.\nLearn more about the parameters here:\nhttps://snap-docs.midtrans.com/#json-parameter-request-body"
 					},
@@ -336,7 +336,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"transaction_details\": {\n    \"order_id\": \"ORDER-101-7\",\n    \"gross_amount\": 10000\n  },\n  \"credit_card\": {\n    \"secure\": true,\n    \"whitelist_bins \": [\n    \t\"bni\",\n    \t\"mandiri\",\n    \t481111,\n    \t573212\n    \t]\n  }\n}"
+							"raw": "{\n  \"transaction_details\": {\n    \"order_id\": \"ORDER-101-7\",\n    \"gross_amount\": 10000\n  },\n  \"credit_card\": {\n    \"secure\": true,\n    \"whitelist_bins\": [\n      \"bni\",\n      \"mandiri\",\n      481111,\n      573212\n      ]\n  }\n}"
 						},
 						"description": "SNAP transaction token request with additional parameter to specify only accept Credit Card from specific BIN number or specific issuing bank.\nLearn more about the parameters here:\nhttps://snap-docs.midtrans.com/#json-object"
 					},
@@ -492,7 +492,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"payment_type\": \"bca_klikbca\",\n    \"transaction_details\": {\n        \"gross_amount\": 44000,\n        \"order_id\": \"order-101f\"\n    },\n    \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ],\n\t\"bca_klikbca\" : {\n\t\t\"description\" : \"testing transaction\",\n\t\t\"user_id\" : \"midtrans1012\"\n\t}\n}"
+							"raw": "{\n    \"payment_type\": \"bca_klikbca\",\n    \"transaction_details\": {\n        \"gross_amount\": 44000,\n        \"order_id\": \"order-101f\"\n    },\n    \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ],\n  \"bca_klikbca\" : {\n    \"description\" : \"testing transaction\",\n    \"user_id\" : \"midtrans1012\"\n  }\n}"
 						},
 						"description": ""
 					},
@@ -517,7 +517,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"payment_type\": \"mandiri_clickpay\",\n    \"transaction_details\": {\n        \"gross_amount\": 44000,\n        \"order_id\": \"order-101g\"\n    },\n    \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ],\n\t\"mandiri_clickpay\": {\n    \t\"card_number\": \"4111111111111111\",\n    \t\"input1\": \"1111111111\",\n    \t\"input2\": \"44000\",\n    \t\"input3\": \"54321\",\n   \t\t\"token\": \"000000\"\n  }\n}"
+							"raw": "{\n    \"payment_type\": \"mandiri_clickpay\",\n    \"transaction_details\": {\n        \"gross_amount\": 44000,\n        \"order_id\": \"order-101g\"\n    },\n    \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ],\n  \"mandiri_clickpay\": {\n      \"card_number\": \"4111111111111111\",\n      \"input1\": \"1111111111\",\n      \"input2\": \"44000\",\n      \"input3\": \"54321\",\n       \"token\": \"000000\"\n  }\n}"
 						},
 						"description": ""
 					},
@@ -567,7 +567,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"payment_type\": \"cimb_clicks\",\n    \"transaction_details\": {\n        \"gross_amount\": 44000,\n        \"order_id\": \"order-101i\"\n    },\n    \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ],\n    \"cimb_clicks\": {\n    \t\"description\": \"Purchase of a Food Delivery\"\n  \t}\n}"
+							"raw": "{\n    \"payment_type\": \"cimb_clicks\",\n    \"transaction_details\": {\n        \"gross_amount\": 44000,\n        \"order_id\": \"order-101i\"\n    },\n    \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ],\n    \"cimb_clicks\": {\n      \"description\": \"Purchase of a Food Delivery\"\n    }\n}"
 						},
 						"description": ""
 					},
@@ -592,7 +592,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"payment_type\": \"telkomsel_cash\",\n    \"transaction_details\": {\n        \"gross_amount\": 44000,\n        \"order_id\": \"order-101j\"\n    },\n    \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ],\n  \t\"telkomsel_cash\": {\n    \t\"promo\": false,\n \t\t\"is_reversal\": 0,\n\t\t\"customer\": \"0811111111\"\n  }\n}"
+							"raw": "{\n    \"payment_type\": \"telkomsel_cash\",\n    \"transaction_details\": {\n        \"gross_amount\": 44000,\n        \"order_id\": \"order-101j\"\n    },\n    \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ],\n    \"telkomsel_cash\": {\n      \"promo\": false,\n     \"is_reversal\": 0,\n    \"customer\": \"0811111111\"\n  }\n}"
 						},
 						"description": ""
 					},
@@ -667,7 +667,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"payment_type\": \"mandiri_ecash\",\n    \"transaction_details\": {\n        \"gross_amount\": 44000,\n        \"order_id\": \"order-101m\"\n    },\n    \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ],\n\t\"mandiri_ecash\": {\n\t\t\"description\": \"Transaction Description\"\n  }\n}"
+							"raw": "{\n    \"payment_type\": \"mandiri_ecash\",\n    \"transaction_details\": {\n        \"gross_amount\": 44000,\n        \"order_id\": \"order-101m\"\n    },\n    \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ],\n  \"mandiri_ecash\": {\n    \"description\": \"Transaction Description\"\n  }\n}"
 						},
 						"description": ""
 					},
@@ -692,7 +692,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"payment_type\": \"cstore\",\n    \"transaction_details\": {\n        \"gross_amount\": 44000,\n        \"order_id\": \"order-101n\"\n    },\n    \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ],\n\t\"cstore\": {\n\t\t\"store\": \"Indomaret\",\n\t\t\"message\": \"Message to display\"\n\t}\n}"
+							"raw": "{\n    \"payment_type\": \"cstore\",\n    \"transaction_details\": {\n        \"gross_amount\": 44000,\n        \"order_id\": \"order-101n\"\n    },\n    \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ],\n  \"cstore\": {\n    \"store\": \"Indomaret\",\n    \"message\": \"Message to display\"\n  }\n}"
 						},
 						"description": ""
 					},
@@ -717,7 +717,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"payment_type\": \"cstore\",\n    \"transaction_details\": {\n        \"gross_amount\": 44000,\n        \"order_id\": \"order-101o\"\n    },\n    \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ],\n\t\"cstore\": {\n\t\t\"store\": \"kioson\",\n\t\t\"message\": \"Message to display\"\n\t}\n}"
+							"raw": "{\n    \"payment_type\": \"cstore\",\n    \"transaction_details\": {\n        \"gross_amount\": 44000,\n        \"order_id\": \"order-101o\"\n    },\n    \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ],\n  \"cstore\": {\n    \"store\": \"kioson\",\n    \"message\": \"Message to display\"\n  }\n}"
 						},
 						"description": ""
 					},
@@ -1048,7 +1048,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"payment_type\": \"bank_transfer\",\n\t\t\"bank_transfer\": {\n\t\t\"bank\": \"permata\"\n\t},\n\t\"transaction_details\": {\n\t\t\"order_id\": \"order-102-9\",\n\t\t\"gross_amount\": 44000\n\t},\n\t\"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n\t\"custom_expiry\": {\n\t\t\"order_time\": \"2017-04-13 18:11:08 +0700\",\n\t\t\"expiry_duration\": 180,\n\t\t\"unit\": \"minute\"\n  }\n}"
+							"raw": "{\n  \"payment_type\": \"bank_transfer\",\n    \"bank_transfer\": {\n    \"bank\": \"permata\"\n  },\n  \"transaction_details\": {\n    \"order_id\": \"order-102-9\",\n    \"gross_amount\": 44000\n  },\n  \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n  \"custom_expiry\": {\n    \"order_time\": \"2017-04-13 18:11:08 +0700\",\n    \"expiry_duration\": 180,\n    \"unit\": \"minute\"\n  }\n}"
 						},
 						"description": "Request charge transaction with specific time limit of transaction to be available for payment"
 					},
@@ -1073,7 +1073,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"payment_type\": \"bank_transfer\",\n\t\t\"bank_transfer\": {\n\t\t\"bank\": \"permata\"\n\t},\n\t\"transaction_details\": {\n\t\t\"order_id\": \"order-102-10\",\n\t\t\"gross_amount\": 44000\n\t},\n\t\"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n\t\"custom_field1\": \"Your custom notes 1 (max 256 char)\",\n\t\"custom_field2\": \"Your custom notes 2 (max 256 char)\",\n\t\"custom_field3\": \"Your custom notes 3 (max 256 char)\"\n}"
+							"raw": "{\n  \"payment_type\": \"bank_transfer\",\n    \"bank_transfer\": {\n    \"bank\": \"permata\"\n  },\n  \"transaction_details\": {\n    \"order_id\": \"order-102-10\",\n    \"gross_amount\": 44000\n  },\n  \"customer_details\": {\n        \"email\": \"test@Midtrans.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n  \"custom_field1\": \"Your custom notes 1 (max 256 char)\",\n  \"custom_field2\": \"Your custom notes 2 (max 256 char)\",\n  \"custom_field3\": \"Your custom notes 3 (max 256 char)\"\n}"
 						},
 						"description": "Request charge transaction with additional parameter to input your custom note/message"
 					},
