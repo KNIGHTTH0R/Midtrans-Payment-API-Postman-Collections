@@ -49,9 +49,13 @@ You can also edit file `snap/index.html` and insert your own token to the HTML, 
 For real example on how you can use Snap token in your website front-end, you can see sample minimum implementation here:
 `../sample-frontend/index.html`
 
+> Edit the file and insert `<Your-Client-Key-Here>` with your client key.
+
 ### Core API - Credit Card Get Token Example
 
-To get credit card token for Core API Credit Card charge process, you can open `../coreAPI-getTokenCC/index.html` in your web browser.
+To get credit card token for Core API Credit Card charge process, you can open `../coreAPI-getTokenCC/index.html` in your web browser. (mandiri clickpay also need get token process).
+
+> Edit the file and insert `<Your-Client-Key-Here>` with your client key.
 
 ##### *All implementation in this example are pure HTML & Javascript so you don't need to have any server running.*
 
@@ -80,6 +84,13 @@ If you get error
 ```
 - Please make sure you do step 4-7 properly like instructed in **[Usage Instruction](#usage-instruction)** section.
 - Please make sure you are using correct **Server Key** (Serverkey for sandbox & production are different).
+
+### Changelog
+
+25/01/2018
+- Add gopay & danamon online banking example.
+- Change mandiri clickpay request, according to docs.
+- Change sample customer email.
 
 ### Get Help
 
