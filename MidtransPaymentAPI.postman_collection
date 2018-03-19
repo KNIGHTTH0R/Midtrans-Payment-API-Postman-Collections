@@ -137,6 +137,31 @@
 					"response": []
 				},
 				{
+					"name": "DENY transaction that suspected as fraud (challange status)",
+					"request": {
+						"url": "https://api.sandbox.midtrans.com/v2/[INSERT-ORDER-ID]/deny",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Deny a transaction with certain order_id which gets challenge status from Fraud Detection System"
+					},
+					"response": []
+				},
+				{
 					"name": "CANCEL transaction",
 					"request": {
 						"url": "https://api.sandbox.midtrans.com/v2/[INSERT-ORDER-ID]/cancel",
@@ -162,9 +187,9 @@
 					"response": []
 				},
 				{
-					"name": "EXPIRE pending transaction",
+					"name": "Refund transaction",
 					"request": {
-						"url": "https://api.sandbox.midtrans.com/v2/[INSERT-ORDER-ID]/expire",
+						"url": "https://api.sandbox.midtrans.com/v2/[INSERT-ORDER-ID]/refund",
 						"method": "POST",
 						"header": [
 							{
@@ -180,9 +205,9 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n  \"amount\": 5000,\n  \"reason\": \"Product is out of stock, payment is being refunded\"\n}"
 						},
-						"description": "Change order_id with pending status to be expired"
+						"description": "Refund a transaction with certain order_id. Refund can only be done after settlement process for credit card transaction"
 					},
 					"response": []
 				}
@@ -350,13 +375,11 @@
 						"header": [
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -375,13 +398,11 @@
 						"header": [
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -596,7 +617,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"payment_type\": \"bank_transfer\",\n  \"bank_transfer\": {\n    \"bank\": \"permata\",\n\t\"va_number\": \"1234567890\"\n  },\n  \"transaction_details\": {\n    \"order_id\": \"order-101b\",\n    \"gross_amount\": 44000\n  },\n    \"customer_details\": {\n        \"email\": \"noreply@example.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ]\n}"
+							"raw": "{\n  \"payment_type\": \"bank_transfer\",\n  \"bank_transfer\": {\n    \"bank\": \"permata\",\n  \"va_number\": \"1234567890\"\n  },\n  \"transaction_details\": {\n    \"order_id\": \"order-101b\",\n    \"gross_amount\": 44000\n  },\n    \"customer_details\": {\n        \"email\": \"noreply@example.com\",\n        \"first_name\": \"budi\",\n        \"last_name\": \"utomo\",\n        \"phone\": \"+6281 1234 1234\"\n    },\n    \"item_details\": [\n    {\n       \"id\": \"item01\",\n       \"price\": 21000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Zozozo\"\n    },\n    {\n       \"id\": \"item02\",\n       \"price\": 23000,\n       \"quantity\": 1,\n       \"name\": \"Ayam Xoxoxo\"\n    }\n   ]\n}"
 						},
 						"description": "Request Bank Transfer transaction\nResponse will also include Bank Transfer VA Number\nhttps://api-docs.midtrans.com/#bank-transfer"
 					},
@@ -978,6 +999,31 @@
 					"response": []
 				},
 				{
+					"name": "19. Pre-Authorize Credit Card Transaction",
+					"request": {
+						"url": "https://api.sandbox.midtrans.com/v2/charge",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"payment_type\": \"credit_card\",\n  \"transaction_details\": {\n    \"order_id\": \"order-101r\",\n    \"gross_amount\": 100000\n  },\n  \"credit_card\": {\n    \"token_id\": \"< Token ID from Get Token Step >\",\n    \"type\": \"authorize\"\n  },\n  \"item_details\": [{\n      \"id\": \"a1\",\n      \"price\": 50000,\n      \"quantity\": 2,\n      \"name\": \"Apel\",\n      \"brand\": \"Fuji Apple\",\n      \"category\": \"Fruit\",\n      \"merchant_name\": \"Fruit-store\"\n    }],\n    \"customer_details\": {\n      \"first_name\": \"BUDI\",\n      \"last_name\": \"UTOMO\",\n      \"email\": \"noreply@example.com\",\n      \"phone\": \"+628123456\",\n      \"billing_address\": {\n        \"first_name\": \"BUDI\",\n        \"last_name\": \"UTOMO\",\n        \"email\": \"noreply@example.com\",\n        \"phone\": \"081 2233 44-55\",\n        \"address\": \"Sudirman\",\n        \"city\": \"Jakarta\",\n        \"postal_code\": \"12190\",\n        \"country_code\": \"IDN\"\n      },\n      \"shipping_address\": {\n        \"first_name\": \"BUDI\",\n        \"last_name\": \"UTOMO\",\n        \"email\": \"noreply@example.com\",\n        \"phone\": \"0 8128-75 7-9338\",\n        \"address\": \"Sudirman\",\n        \"city\": \"Jakarta\",\n        \"postal_code\": \"12190\",\n        \"country_code\": \"IDN\"\n      }\n    }\n}"
+						},
+						"description": "Pre-Authorize card transaction\nPlease do get token step first to get token_id.\nhttps://api-docs.midtrans.com/#card-features-pre-authorization"
+					},
+					"response": []
+				},
+				{
 					"name": "GET transaction status",
 					"request": {
 						"url": "https://api.sandbox.midtrans.com/v2/[INSERT-ORDER-ID]/status",
@@ -1028,6 +1074,31 @@
 					"response": []
 				},
 				{
+					"name": "DENY transaction that suspected as fraud (challange status)",
+					"request": {
+						"url": "https://api.sandbox.midtrans.com/v2/[INSERT-ORDER-ID]/deny",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Deny a transaction with certain order_id which gets challenge status from Fraud Detection System"
+					},
+					"response": []
+				},
+				{
 					"name": "CANCEL transaction",
 					"request": {
 						"url": "https://api.sandbox.midtrans.com/v2/[INSERT-ORDER-ID]/cancel",
@@ -1074,6 +1145,31 @@
 							"raw": ""
 						},
 						"description": "Change order_id with pending status to be expired"
+					},
+					"response": []
+				},
+				{
+					"name": "Refund transaction",
+					"request": {
+						"url": "https://api.sandbox.midtrans.com/v2/[INSERT-ORDER-ID]/refund",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": 5000,\n  \"reason\": \"Product is out of stock, payment is being refunded\"\n}"
+						},
+						"description": "Refund a transaction with certain order_id. Refund can only be done after settlement process for credit card transaction"
 					},
 					"response": []
 				}
